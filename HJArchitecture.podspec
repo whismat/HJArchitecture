@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "HJArchitecture/", "HJCommon/*.{h,m}", "HJService/*.{h,m}", "HJTask/*.{h,m}"
+  s.source_files  = "HJArchitecture", "HJArchitecture/**"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
