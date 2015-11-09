@@ -34,14 +34,14 @@ exit
 
 fi
 
-if [ $3 ]
+if [ "$3" ]
 then
 
-summary=$3
+summary="$3"
 
 else
 
-summary="update something"
+summary='update something'
 
 fi
 
