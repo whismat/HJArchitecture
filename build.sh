@@ -45,6 +45,14 @@ summary='update something'
 
 fi
 
+#change podspec version
+
+spec_filename='HJArchitecture.podspec'
+
+sed -i '' "s/$old_tag_name/$new_tag_name/g" $spec_filename
+
+#push code
+
 echo "start push new code..."
 
 git add -A
@@ -62,12 +70,6 @@ git tag $new_tag_name
 git push origin $new_tag_name
 
 echo "finish push new tag"
-
-#change podspec version
-
-spec_filename='HJArchitecture.podspec'
-
-sed -i '' "s/$old_tag_name/$new_tag_name/g" $spec_filename
 
 #lib lint
 
