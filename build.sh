@@ -1,6 +1,6 @@
 #/bin/sh
 
-#eg. sh spec.sh 1.0.0 1.0.1 "I can do anything!"
+#eg. sh build.sh 1.0.0 1.0.1 "I can do anything!"
 
 if [[ $1  &&  $2 ]]
 then
