@@ -45,7 +45,7 @@ summary='update something'
 
 fi
 
-echo "start push new code"
+echo "start push new code..."
 
 git add -A
 
@@ -55,7 +55,7 @@ git push
 
 echo "finish push new code"
 
-echo "start git new tag"
+echo "start git new tag..."
 
 git tag $new_tag_name
 
@@ -63,17 +63,17 @@ git push origin $new_tag_name
 
 echo "finish push new tag"
 
-echo "start update spec"
+#change podspec version
 
 spec_filename='HJArchitecture.podspec'
 
 sed -i '' "s/$old_tag_name/$new_tag_name/g" $spec_filename
 
-echo "start lint $spec_filename"
+#lib lint
 
 pod lib lint
 
-echo "push $spec_filename"
+echo "start push $spec_filename ..."
 
 pod repo push HJSpecs $spec_filename
 
