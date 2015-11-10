@@ -57,7 +57,7 @@ echo "start push new code..."
 
 #ignorecase false
 
-sudo git config --system core.ignorecase  false
+git config core.ignorecase false
 
 git add -A
 
