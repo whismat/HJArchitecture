@@ -55,6 +55,10 @@ sed -i '' "s/$old_tag_name/$new_tag_name/g" $spec_filename
 
 echo "start push new code..."
 
+#ignorecase false
+
+git config --system core.ignorecase  false
+
 git add -A
 
 git commit -am "$summary"
